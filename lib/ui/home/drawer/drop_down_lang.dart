@@ -91,6 +91,7 @@ class _DropDownLangState extends State<DropDownLang> {
               .key;
           if (wantsCode != languageProvider.language) {
             languageProvider.changeLanguage();
+            Navigator.pop(context);
           }
         },
 

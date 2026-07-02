@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:lahza_news/api/api_manager.dart';
+import 'package:lahza_news/generated/l10n.dart';
+import 'package:svg_flutter/svg.dart';
 
 class MainErrorWidget extends StatelessWidget {
   final String errorMessage;
@@ -13,31 +15,41 @@ class MainErrorWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Padding(
-              padding: const EdgeInsets.all(25.0),
-              child: SizedBox(
-                child: Text(
-                  errorMessage,
+    var width = MediaQuery.of(context).size.width;
+    var hight = MediaQuery.of(context).size.height;
+    return Center(
+      child: Column(
+        spacing: hight * 0.01,
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          SvgPicture.asset(
+            "assets/images/no_connection.svg",
+            width: width * 0.5,
+          ),
+          errorMessage.isEmpty
+              ? Text(
+                  S.of(context).noConnection,
                   style: Theme.of(context).textTheme.titleMedium,
-                  textAlign: .center,
+                )
+              : Padding(
+                  padding: const EdgeInsets.all(25.0),
+                  child: SizedBox(
+                    child: Text(
+                      errorMessage,
+                      style: Theme.of(context).textTheme.titleMedium,
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
                 ),
-              ),
-            ),
 
-            FilledButton(
-              onPressed: () {
-                onPressed;
-              },
-              child: Text("Try Again"),
-            ),
-          ],
-        ),
+          OutlinedButton(
+            onPressed: () {
+              onPressed();
+            },
+            child: Text(S.of(context).TryAgain),
+          ),
+        ],
       ),
     );
   }

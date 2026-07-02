@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:lahza_news/api/api_manager.dart';
 import 'package:lahza_news/gen/assets.gen.dart';
+import 'package:lahza_news/model/category_data.dart';
 import 'package:lahza_news/model/source_response.dart';
 import 'package:lahza_news/widgets/main_error_widget.dart';
 import 'package:lahza_news/widgets/main_loading.dart';
@@ -8,7 +9,8 @@ import 'package:iconsax/iconsax.dart';
 import 'package:lahza_news/widgets/sources_widget.dart';
 
 class CategoryDetails extends StatefulWidget {
-  const CategoryDetails({super.key});
+  final CategoryData category;
+  const CategoryDetails({super.key, required this.category});
 
   @override
   State<CategoryDetails> createState() => _CategoryDetailsState();
@@ -19,7 +21,7 @@ class _CategoryDetailsState extends State<CategoryDetails> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: FutureBuilder<SourceResponse>(
-        future: ApiManager.getSources(),
+        future: ApiManager.getSources(widget.category.id),
         builder: (context, snapshot) {
           //todo: Loading
           if (snapshot.connectionState == ConnectionState.waiting) {
@@ -29,7 +31,7 @@ class _CategoryDetailsState extends State<CategoryDetails> {
             return MainErrorWidget(
               errorMessage: snapshot.data?.message ?? "",
               onPressed: () {
-                ApiManager.getSources();
+                ApiManager.getSources(widget.category.id);
                 setState(() {});
               },
             );
@@ -41,7 +43,7 @@ class _CategoryDetailsState extends State<CategoryDetails> {
             return MainErrorWidget(
               errorMessage: "Something Went Wrong",
               onPressed: () {
-                ApiManager.getSources();
+                ApiManager.getSources(widget.category.id);
                 setState(() {});
               },
             );

@@ -6,8 +6,11 @@ class MainLoading extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: CircularProgressIndicator(
-        color: Theme.of(context).colorScheme.onPrimary,
+      child: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: CircularProgressIndicator(
+          color: Theme.of(context).colorScheme.onPrimary,
+        ),
       ),
     );
   }

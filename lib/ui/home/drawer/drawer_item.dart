@@ -20,9 +20,10 @@ class DrawerItem extends StatelessWidget {
     var width = MediaQuery.of(context).size.width;
     var height = MediaQuery.of(context).size.height;
     return Row(
+      mainAxisSize: MainAxisSize.min,
       spacing: width * 0.026,
       children: [
-        Icon(icon, color: AppColors.primaryColorLight, size: width * 0.07),
+        Icon(icon, color: AppColors.primaryColorLight, size: 30),
         Text(
           title,
           style: Theme.of(
@@ -34,7 +35,7 @@ class DrawerItem extends StatelessWidget {
             ? Container()
             : SvgPicture.asset(
                 perfixIcon,
-                width: width * 0.07,
+                width: 30,
                 color: AppColors.primaryColorLight,
               ),
       ],

@@ -47,6 +47,7 @@ class AppTheme {
         foregroundColor: AppColors.onPrimaryColorLight,
         elevation: 0,
         centerTitle: true,
+        titleTextStyle: AppTextStyle.titleMedium(isArabic: isArabic),
       ),
       // ===== FilledButton =====
       filledButtonTheme: FilledButtonThemeData(
@@ -71,12 +72,12 @@ class AppTheme {
       // ===== OutlinedButton (Stroked) =====
       outlinedButtonTheme: OutlinedButtonThemeData(
         style: OutlinedButton.styleFrom(
-          foregroundColor: AppColors.primaryColorLight,
+          foregroundColor: AppColors.onPrimaryColorLight,
           side: const BorderSide(
-            color: AppColors.primaryColorLight,
+            color: AppColors.onPrimaryColorLight,
             width: 1.5,
           ),
-          textStyle: AppTextStyle.labelLarge(isArabic: isArabic),
+          textStyle: AppTextStyle.bodyLarge(isArabic: isArabic),
           padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
         ),
@@ -147,6 +148,7 @@ class AppTheme {
         foregroundColor: AppColors.onPrimaryColorDark,
         elevation: 0,
         centerTitle: true,
+        titleTextStyle: AppTextStyle.titleMedium(isArabic: isArabic),
       ),
       // ===== FilledButton (Dark) =====
       filledButtonTheme: FilledButtonThemeData(
@@ -158,6 +160,7 @@ class AppTheme {
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
         ),
       ),
+
       //====icon Button====
       iconButtonTheme: IconButtonThemeData(
         style: IconButton.styleFrom(
@@ -172,19 +175,20 @@ class AppTheme {
       // ===== OutlinedButton (Dark) =====
       outlinedButtonTheme: OutlinedButtonThemeData(
         style: OutlinedButton.styleFrom(
-          foregroundColor: AppColors.primaryColorDark,
-          side: const BorderSide(color: AppColors.primaryColorDark, width: 1.5),
-          textStyle: AppTextStyle.labelLarge(isArabic: isArabic),
+          foregroundColor: AppColors.onPrimaryColorDark,
+          side: const BorderSide(
+            color: AppColors.onPrimaryColorDark,
+            width: 1.5,
+          ),
+          textStyle: AppTextStyle.bodyLarge(isArabic: isArabic),
           padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
         ),
       ),
       // ===== TextField (Dark) =====
       inputDecorationTheme: InputDecorationTheme(
-        filled: true,
-        fillColor: Colors.grey[900],
         border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(8),
+          borderRadius: BorderRadius.circular(16),
           borderSide: const BorderSide(color: Colors.grey, width: 1),
         ),
         enabledBorder: OutlineInputBorder(

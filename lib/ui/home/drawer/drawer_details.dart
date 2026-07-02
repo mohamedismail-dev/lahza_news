@@ -11,7 +11,9 @@ import 'package:provider/provider.dart';
 import 'package:svg_flutter/svg.dart';
 
 class DrawerDetails extends StatelessWidget {
-  const DrawerDetails({super.key});
+  VoidCallback onDrawerItemClicked;
+
+  DrawerDetails({super.key, required this.onDrawerItemClicked});
 
   @override
   Widget build(BuildContext context) {
@@ -21,12 +23,17 @@ class DrawerDetails extends StatelessWidget {
     return Column(
       spacing: height * 0.024,
       children: [
-        DrawerItem(
-          title: S.of(context).goHome,
-          icon: Iconsax.home_24,
-          perfixIcon: languageProvider.language == 'en'
-              ? "assets/icons/arrow_right.svg"
-              : "assets/icons/arrow_left.svg",
+        InkWell(
+          onTap: () {
+            onDrawerItemClicked();
+          },
+          child: DrawerItem(
+            title: S.of(context).goHome,
+            icon: Iconsax.home_24,
+            perfixIcon: languageProvider.language == 'en'
+                ? "assets/icons/arrow_right.svg"
+                : "assets/icons/arrow_left.svg",
+          ),
         ),
         Divider(thickness: 1, color: AppColors.primaryColorLight),
         DrawerItem(

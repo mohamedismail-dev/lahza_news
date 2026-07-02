@@ -1,6 +1,7 @@
 import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:flutter/material.dart';
 import 'package:lahza_news/core/app_colors.dart';
+import 'package:lahza_news/core/providers/language_provider.dart';
 import 'package:lahza_news/core/providers/theme_provider.dart';
 import 'package:provider/provider.dart';
 
@@ -12,7 +13,7 @@ class DropDownTheme extends StatefulWidget {
 }
 
 class _DropDownThemeState extends State<DropDownTheme> {
-  static const List<String> _list = ['Dark', 'Light'];
+  static final List<String> _list = ['Dark', 'Light'];
   late final ValueNotifier<String?> _valueListenable;
 
   @override
@@ -31,6 +32,11 @@ class _DropDownThemeState extends State<DropDownTheme> {
   @override
   Widget build(BuildContext context) {
     final themeProvider = context.watch<ThemeProvider>();
+    final languageProvider = Provider.of<LanguageProvider>(context);
+
+    final _list = languageProvider.language == 'en'
+        ? ['Dark', 'Light']
+        : ['داكـن', 'فاتــح'];
 
     // لو الثيم تغيّر من مكان تاني في التطبيق، نزامن قيمة الدروب داون هنا
     _valueListenable.value = themeProvider.isDarkMode ? _list[0] : _list[1];
@@ -78,6 +84,7 @@ class _DropDownThemeState extends State<DropDownTheme> {
           final wantsDark = value == _list[0];
           if (wantsDark != themeProvider.isDarkMode) {
             themeProvider.changeTheme();
+            Navigator.pop(context);
           }
         },
 

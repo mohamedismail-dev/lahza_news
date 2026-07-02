@@ -88,6 +88,41 @@ class S {
   String get home {
     return Intl.message('Home', name: 'home', desc: '', args: []);
   }
+
+  /// `No news found!`
+  String get NoNewsFound {
+    return Intl.message(
+      'No news found!',
+      name: 'NoNewsFound',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Try Again`
+  String get TryAgain {
+    return Intl.message('Try Again', name: 'TryAgain', desc: '', args: []);
+  }
+
+  /// `No Connection!`
+  String get noConnection {
+    return Intl.message(
+      'No Connection!',
+      name: 'noConnection',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `View Full Article`
+  String get viewFullArticle {
+    return Intl.message(
+      'View Full Article',
+      name: 'viewFullArticle',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

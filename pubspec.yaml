@@ -47,6 +47,7 @@ dependencies:
   flutter_launcher_icons: ^0.14.4
   dropdown_button2: ^3.1.0
   google_fonts: ^6.2.1
+  webview_flutter: ^4.14.0
   
 
 dev_dependencies:

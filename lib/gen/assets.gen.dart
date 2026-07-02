@@ -73,8 +73,14 @@ class $AssetsImagesGen {
   AssetGenImage get logoSplashLight =>
       const AssetGenImage('assets/images/logo_splash_light.png');
 
+  /// File path: assets/images/no_connection.svg
+  String get noConnection => 'assets/images/no_connection.svg';
+
+  /// File path: assets/images/no_news.svg
+  String get noNews => 'assets/images/no_news.svg';
+
   /// List of all assets
-  List<AssetGenImage> get values => [
+  List<dynamic> get values => [
     category1,
     category2,
     category3,
@@ -85,6 +91,8 @@ class $AssetsImagesGen {
     logoAppIcon,
     logoSplashDark,
     logoSplashLight,
+    noConnection,
+    noNews,
   ];
 }
 

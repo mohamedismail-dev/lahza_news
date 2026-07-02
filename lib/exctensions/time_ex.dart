@@ -4,7 +4,8 @@ extension TimeAgoExtension on String {
   String toTimeAgo() {
     try {
       final date = DateTime.parse(this);
-      return timeago.format(date);
+      final localDate = date.isUtc ? date.toLocal() : date;
+      return timeago.format(localDate);
     } catch (e) {
       return this;
     }

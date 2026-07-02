@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:lahza_news/api/api_manager.dart';
+import 'package:lahza_news/exctensions/time_ex.dart';
+import 'package:lahza_news/generated/l10n.dart';
 import 'package:lahza_news/model/source_response.dart';
 import 'package:lahza_news/news/news_items.dart';
 import 'package:lahza_news/widgets/main_error_widget.dart';
 import 'package:lahza_news/widgets/main_loading.dart';
+import 'package:svg_flutter/svg.dart';
 
 class NewsWidget extends StatefulWidget {
   final Source source;
@@ -16,6 +19,7 @@ class NewsWidget extends StatefulWidget {
 class _NewsWidgetState extends State<NewsWidget> {
   @override
   Widget build(BuildContext context) {
+    var width = MediaQuery.of(context).size.width;
     return FutureBuilder(
       future: getNewsBySourceId(widget.source.id ?? ""),
       builder: (context, snapshot) {
@@ -35,9 +39,18 @@ class _NewsWidgetState extends State<NewsWidget> {
           var newsList = snapshot.data?.articles ?? [];
           return newsList.isEmpty
               ? Center(
-                  child: Text(
-                    "No News Found!",
-                    style: Theme.of(context).textTheme.titleMedium,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      SvgPicture.asset(
+                        "assets/images/no_news.svg",
+                        width: width * 0.5,
+                      ),
+                      Text(
+                        S.of(context).NoNewsFound,
+                        style: Theme.of(context).textTheme.titleMedium,
+                      ),
+                    ],
                   ),
                 )
               : ListView.builder(

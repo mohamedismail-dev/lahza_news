@@ -26,9 +26,9 @@ List<CategoryData> categories = [
     image: 'assets/images/category2.png',
   ),
   CategoryData(
-    id: 'sport',
-    titleEng: 'Sport',
-    titleAr: "رياضــة",
+    id: 'sports',
+    titleEng: 'Sports',
+    titleAr: "الرياضــات",
     image: 'assets/images/category3.png',
   ),
   CategoryData(
