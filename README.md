@@ -14,7 +14,7 @@ A modern Flutter news application that delivers the latest news from trusted glo
 
 ![Flutter](https://img.shields.io/badge/Flutter-3.x-02569B?style=for-the-badge&logo=flutter&logoColor=white)
 ![Dart](https://img.shields.io/badge/Dart-3.x-0175C2?style=for-the-badge&logo=dart&logoColor=white)
-![BLoC](https://img.shields.io/badge/BLoC-State%20Management-40C4FF?style=for-the-badge)
+![Provider](https://img.shields.io/badge/Provider-State%20Management-7B1FA2?style=for-the-badge)
 ![Localization](https://img.shields.io/badge/14-Languages-success?style=for-the-badge)
 ![REST API](https://img.shields.io/badge/REST-API-orange?style=for-the-badge)
 ![Responsive](https://img.shields.io/badge/Responsive-UI-blue?style=for-the-badge)
