@@ -25,10 +25,11 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    var languageProvider = Provider.of<LanguageProvider>(context).language;
+    final languageProvider = Provider.of<LanguageProvider>(context);
     var themeProvider = Provider.of<ThemeProvider>(context).appTheme;
 
-    final isArabic = languageProvider == 'ar';
+    // isRtl بقت بتدعم 3 لغات RTL (ar, he, ud) مش بس العربي
+    final isRtl = languageProvider.isRtl;
 
     return MaterialApp(
       localizationsDelegates: const [
@@ -39,9 +40,9 @@ class MyApp extends StatelessWidget {
       ],
       supportedLocales: S.delegate.supportedLocales,
       debugShowCheckedModeBanner: false,
-      locale: Locale(languageProvider),
-      theme: AppTheme.lightTheme(isArabic: isArabic),
-      darkTheme: AppTheme.darkTheme(isArabic: isArabic),
+      locale: languageProvider.locale,
+      theme: AppTheme.lightTheme(isArabic: isRtl),
+      darkTheme: AppTheme.darkTheme(isArabic: isRtl),
       themeMode: themeProvider,
       home: HomeScreen(),
     );

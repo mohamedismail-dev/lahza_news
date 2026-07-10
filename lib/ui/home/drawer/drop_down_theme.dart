@@ -13,14 +13,33 @@ class DropDownTheme extends StatefulWidget {
 }
 
 class _DropDownThemeState extends State<DropDownTheme> {
-  static final List<String> _list = ['Dark', 'Light'];
+  // ترجمة "Dark"/"Light" لكل لغة مدعومة (نفس نمط CategoryData.titles)
+  static const Map<String, List<String>> _themeLabels = {
+    'en': ['Dark', 'Light'],
+    'ar': ['داكـن', 'فاتــح'],
+    'de': ['Dunkel', 'Hell'],
+    'es': ['Oscuro', 'Claro'],
+    'fr': ['Sombre', 'Clair'],
+    'he': ['כהה', 'בהיר'],
+    'it': ['Scuro', 'Chiaro'],
+    'nl': ['Donker', 'Licht'],
+    'no': ['Mørk', 'Lys'],
+    'pt': ['Escuro', 'Claro'],
+    'ru': ['Тёмная', 'Светлая'],
+    'sv': ['Mörkt', 'Ljust'],
+    'ur': ['گہرا', 'ہلکا'],
+    'zh': ['深色', '浅色'],
+  };
+
   late final ValueNotifier<String?> _valueListenable;
 
   @override
   void initState() {
     super.initState();
     final isDark = context.read<ThemeProvider>().isDarkMode;
-    _valueListenable = ValueNotifier<String?>(isDark ? _list[0] : _list[1]);
+    final languageCode = context.read<LanguageProvider>().language;
+    final labels = _themeLabels[languageCode] ?? _themeLabels['en']!;
+    _valueListenable = ValueNotifier<String?>(isDark ? labels[0] : labels[1]);
   }
 
   @override
@@ -34,12 +53,11 @@ class _DropDownThemeState extends State<DropDownTheme> {
     final themeProvider = context.watch<ThemeProvider>();
     final languageProvider = Provider.of<LanguageProvider>(context);
 
-    final _list = languageProvider.language == 'en'
-        ? ['Dark', 'Light']
-        : ['داكـن', 'فاتــح'];
+    final labels =
+        _themeLabels[languageProvider.language] ?? _themeLabels['en']!;
 
     // لو الثيم تغيّر من مكان تاني في التطبيق، نزامن قيمة الدروب داون هنا
-    _valueListenable.value = themeProvider.isDarkMode ? _list[0] : _list[1];
+    _valueListenable.value = themeProvider.isDarkMode ? labels[0] : labels[1];
 
     return DropdownButtonHideUnderline(
       child: DropdownButton2<String>(
@@ -47,7 +65,7 @@ class _DropDownThemeState extends State<DropDownTheme> {
         valueListenable: _valueListenable,
 
         // عناصر القائمة لما تكون مفتوحة (الـ expanded state)
-        items: _list
+        items: labels
             .map(
               (item) => DropdownItem<String>(
                 value: item,
@@ -65,7 +83,7 @@ class _DropDownThemeState extends State<DropDownTheme> {
 
         // الشكل اللي بيظهر في الزرار المقفول (مختلف عن شكل العنصر جوه القائمة)
         selectedItemBuilder: (context) {
-          return _list
+          return labels
               .map(
                 (item) => Text(
                   item,
@@ -81,7 +99,7 @@ class _DropDownThemeState extends State<DropDownTheme> {
 
         onChanged: (value) {
           if (value == null) return;
-          final wantsDark = value == _list[0];
+          final wantsDark = value == labels[0];
           if (wantsDark != themeProvider.isDarkMode) {
             themeProvider.changeTheme();
             Navigator.pop(context);

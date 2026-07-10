@@ -1,12 +1,16 @@
 {
     "ViewAll": "عرض الكل",
-    "WelcomeText": "مرحبــا\nهنا بعض الاخبار لك",
+    "WelcomeText": "مرحبــا\nهناك بعض الاخبار لك",
     "theme": "الوضع",
     "language": "اللغة",
     "goHome": "الي الصفحة الرئيسية",
     "home": "الصفحة الرئيسية",
-    "NoNewsFound": "!لا يوجد اخبار",
+    "NoNewsFound": "لا يوجد اخبار!",
     "TryAgain": "أعد المحاولة" ,
-    "noConnection": "!لا يوجد اتصال",
-    "viewFullArticle": "عرض المقالة كاملة"
+    "noConnection": "لا يوجد اتصال!",
+    "viewFullArticle": "عرض المقالة كاملة",
+    "noResultsFound": "لا يوجد نتائج!",
+    "search": "بحث"
+    
+    
 }

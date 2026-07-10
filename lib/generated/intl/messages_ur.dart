@@ -1,5 +1,5 @@
 // DO NOT EDIT. This is code generated via package:intl/generate_localized.dart
-// This is a library that provides messages for a en locale. All the
+// This is a library that provides messages for a ur locale. All the
 // messages from the main program should be duplicated here with the same
 // function name.
 
@@ -18,25 +18,27 @@ final messages = new MessageLookup();
 typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 
 class MessageLookup extends MessageLookupByLibrary {
-  String get localeName => 'en';
+  String get localeName => 'ur';
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
-    "NoNewsFound": MessageLookupByLibrary.simpleMessage("No news found!"),
-    "TryAgain": MessageLookupByLibrary.simpleMessage("Try Again"),
-    "ViewAll": MessageLookupByLibrary.simpleMessage("View all"),
+    "NoNewsFound": MessageLookupByLibrary.simpleMessage("کوئی خبر نہیں ملی!"),
+    "TryAgain": MessageLookupByLibrary.simpleMessage("دوبارہ کوشش کریں"),
+    "ViewAll": MessageLookupByLibrary.simpleMessage("سب دیکھیں"),
     "WelcomeText": MessageLookupByLibrary.simpleMessage(
-      "Good Morning\nHere is Some News For You",
+      "صبح بخیر\nآپ کے لیے کچھ خبریں یہ ہیں",
     ),
-    "goHome": MessageLookupByLibrary.simpleMessage("Go To Home"),
-    "home": MessageLookupByLibrary.simpleMessage("Home"),
-    "language": MessageLookupByLibrary.simpleMessage("Language"),
-    "noConnection": MessageLookupByLibrary.simpleMessage("No Connection!"),
-    "noResultsFound": MessageLookupByLibrary.simpleMessage("No Results Found!"),
-    "search": MessageLookupByLibrary.simpleMessage("Search"),
-    "theme": MessageLookupByLibrary.simpleMessage("Theme"),
+    "goHome": MessageLookupByLibrary.simpleMessage("ہوم پر جائیں"),
+    "home": MessageLookupByLibrary.simpleMessage("ہوم"),
+    "language": MessageLookupByLibrary.simpleMessage("زبان"),
+    "noConnection": MessageLookupByLibrary.simpleMessage("کوئی کنکشن نہیں!"),
+    "noResultsFound": MessageLookupByLibrary.simpleMessage(
+      "کوئی نتیجہ نہیں ملا!",
+    ),
+    "search": MessageLookupByLibrary.simpleMessage("تلاش کریں"),
+    "theme": MessageLookupByLibrary.simpleMessage("تھیم"),
     "viewFullArticle": MessageLookupByLibrary.simpleMessage(
-      "View Full Article",
+      "مکمل آرٹیکل دیکھیں",
     ),
   };
 }

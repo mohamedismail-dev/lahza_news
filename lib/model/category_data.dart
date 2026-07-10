@@ -1,58 +1,156 @@
 class CategoryData {
   String id;
-  String titleEng;
-  String titleAr;
+  Map<String, String> titles;
   String image;
 
-  CategoryData({
-    required this.titleEng,
-    required this.titleAr,
-    required this.image,
-    required this.id,
-  });
+  CategoryData({required this.id, required this.titles, required this.image});
+
+  // بيرجع عنوان الفئة باللغة المطلوبة
+  // لو اللغة المطلوبة مش موجودة (نادر، احتياطي) بيرجع الإنجليزي كـ fallback
+  String titleFor(String languageCode) {
+    return titles[languageCode] ?? titles['en'] ?? '';
+  }
 }
 
 List<CategoryData> categories = [
   CategoryData(
     id: 'general',
-    titleEng: 'General',
-    titleAr: "عــام",
     image: 'assets/images/category1.png',
+    titles: {
+      'en': 'General',
+      'ar': 'عــام',
+      'de': 'Allgemein',
+      'es': 'General',
+      'fr': 'Général',
+      'he': 'כללי',
+      'it': 'Generale',
+      'nl': 'Algemeen',
+      'no': 'Generelt',
+      'pt': 'Geral',
+      'ru': 'Общее',
+      'sv': 'Allmänt',
+      'ur': 'عام',
+      'zh': '综合',
+    },
   ),
   CategoryData(
     id: 'business',
-    titleEng: 'Business',
-    titleAr: "تجــارة",
     image: 'assets/images/category2.png',
+    titles: {
+      'en': 'Business',
+      'ar': 'تجــارة',
+      'de': 'Wirtschaft',
+      'es': 'Negocios',
+      'fr': 'Affaires',
+      'he': 'עסקים',
+      'it': 'Economia',
+      'nl': 'Zaken',
+      'no': 'Næringsliv',
+      'pt': 'Negócios',
+      'ru': 'Бизнес',
+      'sv': 'Näringsliv',
+      'ur': 'کاروبار',
+      'zh': '商业',
+    },
   ),
   CategoryData(
     id: 'sports',
-    titleEng: 'Sports',
-    titleAr: "الرياضــات",
     image: 'assets/images/category3.png',
+    titles: {
+      'en': 'Sports',
+      'ar': 'الرياضــات',
+      'de': 'Sport',
+      'es': 'Deportes',
+      'fr': 'Sports',
+      'he': 'ספורט',
+      'it': 'Sport',
+      'nl': 'Sport',
+      'no': 'Sport',
+      'pt': 'Esportes',
+      'ru': 'Спорт',
+      'sv': 'Sport',
+      'ur': 'کھیل',
+      'zh': '体育',
+    },
   ),
   CategoryData(
     id: 'technology',
-    titleEng: 'Technology',
-    titleAr: "تكنولوجيــا",
     image: 'assets/images/category4.png',
+    titles: {
+      'en': 'Technology',
+      'ar': 'تكنولوجيــا',
+      'de': 'Technologie',
+      'es': 'Tecnología',
+      'fr': 'Technologie',
+      'he': 'טכנולוגיה',
+      'it': 'Tecnologia',
+      'nl': 'Technologie',
+      'no': 'Teknologi',
+      'pt': 'Tecnologia',
+      'ru': 'Технологии',
+      'sv': 'Teknik',
+      'ur': 'ٹیکنالوجی',
+      'zh': '科技',
+    },
   ),
   CategoryData(
     id: 'entertainment',
-    titleEng: 'Entertainment',
-    titleAr: "ترفيــه",
     image: 'assets/images/category5.png',
+    titles: {
+      'en': 'Entertainment',
+      'ar': 'ترفيــه',
+      'de': 'Unterhaltung',
+      'es': 'Entretenimiento',
+      'fr': 'Divertissement',
+      'he': 'בידור',
+      'it': 'Intrattenimento',
+      'nl': 'Entertainment',
+      'no': 'Underholdning',
+      'pt': 'Entretenimento',
+      'ru': 'Развлечения',
+      'sv': 'Underhållning',
+      'ur': 'تفریح',
+      'zh': '娱乐',
+    },
   ),
   CategoryData(
     id: 'health',
-    titleEng: 'Health',
-    titleAr: "صحــة",
     image: 'assets/images/category6.png',
+    titles: {
+      'en': 'Health',
+      'ar': 'صحــة',
+      'de': 'Gesundheit',
+      'es': 'Salud',
+      'fr': 'Santé',
+      'he': 'בריאות',
+      'it': 'Salute',
+      'nl': 'Gezondheid',
+      'no': 'Helse',
+      'pt': 'Saúde',
+      'ru': 'Здоровье',
+      'sv': 'Hälsa',
+      'ur': 'صحت',
+      'zh': '健康',
+    },
   ),
   CategoryData(
     id: 'science',
-    titleEng: 'Science',
-    titleAr: "علــم",
     image: 'assets/images/category7.png',
+    titles: {
+      'en': 'Science',
+      'ar': 'علــم',
+      'de': 'Wissenschaft',
+      'es': 'Ciencia',
+      'fr': 'Science',
+      'he': 'מדע',
+      'it': 'Scienza',
+      'nl': 'Wetenschap',
+      'no': 'Vitenskap',
+      'pt': 'Ciência',
+      'ru': 'Наука',
+      'sv': 'Vetenskap',
+      'ur': 'سائنس',
+      'zh': '科学',
+    },
   ),
 ];

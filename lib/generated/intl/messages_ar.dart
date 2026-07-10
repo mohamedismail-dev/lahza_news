@@ -22,16 +22,18 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
-    "NoNewsFound": MessageLookupByLibrary.simpleMessage("!لا يوجد اخبار"),
+    "NoNewsFound": MessageLookupByLibrary.simpleMessage("لا يوجد اخبار!"),
     "TryAgain": MessageLookupByLibrary.simpleMessage("أعد المحاولة"),
     "ViewAll": MessageLookupByLibrary.simpleMessage("عرض الكل"),
     "WelcomeText": MessageLookupByLibrary.simpleMessage(
-      "مرحبــا\nهنا بعض الاخبار لك",
+      "مرحبــا\nهناك بعض الاخبار لك",
     ),
     "goHome": MessageLookupByLibrary.simpleMessage("الي الصفحة الرئيسية"),
     "home": MessageLookupByLibrary.simpleMessage("الصفحة الرئيسية"),
     "language": MessageLookupByLibrary.simpleMessage("اللغة"),
-    "noConnection": MessageLookupByLibrary.simpleMessage("!لا يوجد اتصال"),
+    "noConnection": MessageLookupByLibrary.simpleMessage("لا يوجد اتصال!"),
+    "noResultsFound": MessageLookupByLibrary.simpleMessage("لا يوجد نتائج!"),
+    "search": MessageLookupByLibrary.simpleMessage("بحث"),
     "theme": MessageLookupByLibrary.simpleMessage("الوضع"),
     "viewFullArticle": MessageLookupByLibrary.simpleMessage(
       "عرض المقالة كاملة",

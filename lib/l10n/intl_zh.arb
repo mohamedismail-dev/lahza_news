@@ -1,0 +1,14 @@
+{
+    "ViewAll": "查看全部",
+    "WelcomeText": "早上好\n这里是为您准备的新闻",
+    "theme": "主题",
+    "language": "语言",
+    "goHome": "返回主页",
+    "home": "主页",
+    "NoNewsFound": "未找到新闻！",
+    "TryAgain": "重试",
+    "noConnection": "无网络连接！",
+    "viewFullArticle": "查看完整文章",
+    "noResultsFound": "未找到结果！",
+    "search": "搜索"
+}

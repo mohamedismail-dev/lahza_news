@@ -52,17 +52,23 @@ class CategoryItems extends StatelessWidget {
                 spacing: hight * 0.05,
                 children: [
                   Text(
-                    languageProvider.language == 'en'
-                        ? categories[index].titleEng
-                        : categories[index].titleAr,
+                    categories[index].titleFor(languageProvider.language),
                     style: Theme.of(context).textTheme.headlineLarge!.copyWith(
                       color: Theme.of(context).colorScheme.primary,
+
                       fontWeight: FontWeight.bold,
                     ),
                   ),
                   Container(
                     height: hight * 0.06,
-                    width: width * 0.44,
+
+                    width: languageProvider.language == "ru"
+                        ? width * 0.60
+                        : languageProvider.language == "de"
+                        ? width * 0.58
+                        : languageProvider.language == "ur"
+                        ? width * 0.50
+                        : width * 0.44,
                     alignment: AlignmentGeometry.bottomRight,
                     decoration: BoxDecoration(
                       color: Theme.of(
@@ -90,9 +96,14 @@ class CategoryItems extends StatelessWidget {
                                 : "assets/icons/arrow_left.svg",
                           ),
                         ),
-                        Text(
-                          S.of(context).ViewAll,
-                          style: Theme.of(context).textTheme.titleLarge,
+                        Expanded(
+                          child: Text(
+                            S.of(context).ViewAll,
+                            textAlign: isEven
+                                ? TextAlign.right
+                                : TextAlign.left,
+                            style: Theme.of(context).textTheme.titleLarge,
+                          ),
                         ),
                       ],
                     ),

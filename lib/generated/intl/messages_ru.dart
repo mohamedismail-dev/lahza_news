@@ -1,5 +1,5 @@
 // DO NOT EDIT. This is code generated via package:intl/generate_localized.dart
-// This is a library that provides messages for a en locale. All the
+// This is a library that provides messages for a ru locale. All the
 // messages from the main program should be duplicated here with the same
 // function name.
 
@@ -18,25 +18,27 @@ final messages = new MessageLookup();
 typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 
 class MessageLookup extends MessageLookupByLibrary {
-  String get localeName => 'en';
+  String get localeName => 'ru';
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
-    "NoNewsFound": MessageLookupByLibrary.simpleMessage("No news found!"),
-    "TryAgain": MessageLookupByLibrary.simpleMessage("Try Again"),
-    "ViewAll": MessageLookupByLibrary.simpleMessage("View all"),
+    "NoNewsFound": MessageLookupByLibrary.simpleMessage("Новости не найдены!"),
+    "TryAgain": MessageLookupByLibrary.simpleMessage("Повторить попытку"),
+    "ViewAll": MessageLookupByLibrary.simpleMessage("Смотреть все"),
     "WelcomeText": MessageLookupByLibrary.simpleMessage(
-      "Good Morning\nHere is Some News For You",
+      "Доброе утро\nВот немного новостей для вас",
     ),
-    "goHome": MessageLookupByLibrary.simpleMessage("Go To Home"),
-    "home": MessageLookupByLibrary.simpleMessage("Home"),
-    "language": MessageLookupByLibrary.simpleMessage("Language"),
-    "noConnection": MessageLookupByLibrary.simpleMessage("No Connection!"),
-    "noResultsFound": MessageLookupByLibrary.simpleMessage("No Results Found!"),
-    "search": MessageLookupByLibrary.simpleMessage("Search"),
-    "theme": MessageLookupByLibrary.simpleMessage("Theme"),
+    "goHome": MessageLookupByLibrary.simpleMessage("На главную"),
+    "home": MessageLookupByLibrary.simpleMessage("Главная"),
+    "language": MessageLookupByLibrary.simpleMessage("Язык"),
+    "noConnection": MessageLookupByLibrary.simpleMessage("Нет подключения!"),
+    "noResultsFound": MessageLookupByLibrary.simpleMessage(
+      "Результаты не найдены!",
+    ),
+    "search": MessageLookupByLibrary.simpleMessage("Поиск"),
+    "theme": MessageLookupByLibrary.simpleMessage("Тема"),
     "viewFullArticle": MessageLookupByLibrary.simpleMessage(
-      "View Full Article",
+      "Просмотреть полную статью",
     ),
   };
 }

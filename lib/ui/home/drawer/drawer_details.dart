@@ -30,9 +30,9 @@ class DrawerDetails extends StatelessWidget {
           child: DrawerItem(
             title: S.of(context).goHome,
             icon: Iconsax.home_24,
-            perfixIcon: languageProvider.language == 'en'
-                ? "assets/icons/arrow_right.svg"
-                : "assets/icons/arrow_left.svg",
+            perfixIcon: languageProvider.isRtl
+                ? "assets/icons/arrow_left.svg"
+                : "assets/icons/arrow_right.svg",
           ),
         ),
         Divider(thickness: 1, color: AppColors.primaryColorLight),

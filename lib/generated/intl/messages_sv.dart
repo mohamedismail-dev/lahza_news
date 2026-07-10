@@ -1,5 +1,5 @@
 // DO NOT EDIT. This is code generated via package:intl/generate_localized.dart
-// This is a library that provides messages for a en locale. All the
+// This is a library that provides messages for a sv locale. All the
 // messages from the main program should be duplicated here with the same
 // function name.
 
@@ -18,25 +18,29 @@ final messages = new MessageLookup();
 typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 
 class MessageLookup extends MessageLookupByLibrary {
-  String get localeName => 'en';
+  String get localeName => 'sv';
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
-    "NoNewsFound": MessageLookupByLibrary.simpleMessage("No news found!"),
-    "TryAgain": MessageLookupByLibrary.simpleMessage("Try Again"),
-    "ViewAll": MessageLookupByLibrary.simpleMessage("View all"),
-    "WelcomeText": MessageLookupByLibrary.simpleMessage(
-      "Good Morning\nHere is Some News For You",
+    "NoNewsFound": MessageLookupByLibrary.simpleMessage(
+      "Inga nyheter hittades!",
     ),
-    "goHome": MessageLookupByLibrary.simpleMessage("Go To Home"),
-    "home": MessageLookupByLibrary.simpleMessage("Home"),
-    "language": MessageLookupByLibrary.simpleMessage("Language"),
-    "noConnection": MessageLookupByLibrary.simpleMessage("No Connection!"),
-    "noResultsFound": MessageLookupByLibrary.simpleMessage("No Results Found!"),
-    "search": MessageLookupByLibrary.simpleMessage("Search"),
-    "theme": MessageLookupByLibrary.simpleMessage("Theme"),
+    "TryAgain": MessageLookupByLibrary.simpleMessage("Försök igen"),
+    "ViewAll": MessageLookupByLibrary.simpleMessage("Visa alla"),
+    "WelcomeText": MessageLookupByLibrary.simpleMessage(
+      "God morgon\nHär är några nyheter åt dig",
+    ),
+    "goHome": MessageLookupByLibrary.simpleMessage("Gå till hem"),
+    "home": MessageLookupByLibrary.simpleMessage("Hem"),
+    "language": MessageLookupByLibrary.simpleMessage("Språk"),
+    "noConnection": MessageLookupByLibrary.simpleMessage("Ingen anslutning!"),
+    "noResultsFound": MessageLookupByLibrary.simpleMessage(
+      "Inga resultat hittades!",
+    ),
+    "search": MessageLookupByLibrary.simpleMessage("Sök"),
+    "theme": MessageLookupByLibrary.simpleMessage("Tema"),
     "viewFullArticle": MessageLookupByLibrary.simpleMessage(
-      "View Full Article",
+      "Visa hela artikeln",
     ),
   };
 }

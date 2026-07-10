@@ -1,0 +1,14 @@
+{
+    "ViewAll": "Ver todo",
+    "WelcomeText": "Buenos días\nAquí tienes algunas noticias para ti",
+    "theme": "Tema",
+    "language": "Idioma",
+    "goHome": "Ir al inicio",
+    "home": "Inicio",
+    "NoNewsFound": "¡No se encontraron noticias!",
+    "TryAgain": "Intentar de nuevo",
+    "noConnection": "¡Sin conexión!",
+    "viewFullArticle": "Ver artículo completo",
+    "noResultsFound": "¡No se encontraron resultados!",
+    "search": "Buscar"
+}

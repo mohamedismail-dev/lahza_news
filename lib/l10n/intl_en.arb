@@ -8,6 +8,8 @@
     "NoNewsFound": "No news found!",
     "TryAgain": "Try Again",
     "noConnection": "No Connection!",
-    "viewFullArticle": "View Full Article"
+    "viewFullArticle": "View Full Article",
+    "noResultsFound": "No Results Found!",
+    "search": "Search"
     
 }

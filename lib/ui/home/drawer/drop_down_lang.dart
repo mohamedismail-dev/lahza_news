@@ -12,24 +12,13 @@ class DropDownLang extends StatefulWidget {
 }
 
 class _DropDownLangState extends State<DropDownLang> {
-  // القيم الداخلية المطابقة لما هو مخزن في LanguageProvider (en/ar)
-  static const List<String> _codes = ['en', 'ar'];
-
-  // الأسماء المعروضة للمستخدم
-  static const Map<String, String> _displayNames = {
-    'en': 'English',
-    'ar': 'العربية',
-  };
-
   late final ValueNotifier<String?> _valueListenable;
 
   @override
   void initState() {
     super.initState();
     final currentCode = context.read<LanguageProvider>().language;
-    _valueListenable = ValueNotifier<String?>(
-      _displayNames[currentCode] ?? _displayNames[_codes.first],
-    );
+    _valueListenable = ValueNotifier<String?>(currentCode);
   }
 
   @override
@@ -41,10 +30,10 @@ class _DropDownLangState extends State<DropDownLang> {
   @override
   Widget build(BuildContext context) {
     final languageProvider = context.watch<LanguageProvider>();
+    final languages = LanguageProvider.supportedLanguages;
 
     // لو اللغة تغيّرت من مكان تاني في التطبيق، نزامن قيمة الدروب داون هنا
-    _valueListenable.value =
-        _displayNames[languageProvider.language] ?? _displayNames[_codes.first];
+    _valueListenable.value = languageProvider.language;
 
     return DropdownButtonHideUnderline(
       child: DropdownButton2<String>(
@@ -52,17 +41,35 @@ class _DropDownLangState extends State<DropDownLang> {
         valueListenable: _valueListenable,
 
         // عناصر القائمة لما تكون مفتوحة (الـ expanded state)
-        items: _codes
+        items: languages
             .map(
-              (code) => DropdownItem<String>(
-                value: _displayNames[code],
-                child: Text(
-                  _displayNames[code]!,
-                  style: const TextStyle(
-                    color: Colors.black, // لون الآيتمز جوه القائمة المفتوحة
-                    fontSize: 16,
-                    fontWeight: FontWeight.w500,
-                  ),
+              (lang) => DropdownItem<String>(
+                value: lang.code,
+                child: Row(
+                  textDirection: lang.isRtl
+                      ? TextDirection.rtl
+                      : TextDirection.ltr,
+                  children: [
+                    Expanded(
+                      child: Text(
+                        lang.nativeName,
+                        textDirection: lang.isRtl
+                            ? TextDirection.rtl
+                            : TextDirection.ltr,
+                        style: const TextStyle(
+                          color: Colors.black,
+                          fontSize: 16,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                    ),
+                    if (lang.code == languageProvider.language)
+                      const Icon(
+                        Icons.check_rounded,
+                        size: 18,
+                        color: AppColors.onPrimaryColorDark,
+                      ),
+                  ],
                 ),
               ),
             )
@@ -70,27 +77,30 @@ class _DropDownLangState extends State<DropDownLang> {
 
         // الشكل اللي بيظهر في الزرار المقفول (مختلف عن شكل العنصر جوه القائمة)
         selectedItemBuilder: (context) {
-          return _codes
+          return languages
               .map(
-                (code) => Text(
-                  _displayNames[code]!,
-                  style: const TextStyle(
-                    color: Colors.white, // لون النص في الزرار المقفول
-                    fontSize: 16,
-                    fontWeight: FontWeight.w500,
+                (lang) => Align(
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    lang.nativeName,
+                    textDirection: lang.isRtl
+                        ? TextDirection.rtl
+                        : TextDirection.ltr,
+                    style: const TextStyle(
+                      color: Colors.white,
+                      fontSize: 16,
+                      fontWeight: FontWeight.w500,
+                    ),
                   ),
                 ),
               )
               .toList();
         },
 
-        onChanged: (value) {
-          if (value == null) return;
-          final wantsCode = _displayNames.entries
-              .firstWhere((entry) => entry.value == value)
-              .key;
-          if (wantsCode != languageProvider.language) {
-            languageProvider.changeLanguage();
+        onChanged: (code) {
+          if (code == null) return;
+          if (code != languageProvider.language) {
+            languageProvider.setLanguage(code);
             Navigator.pop(context);
           }
         },
@@ -121,7 +131,9 @@ class _DropDownLangState extends State<DropDownLang> {
         ),
 
         // ستايل القائمة المفتوحة (الصندوق نفسه، مش النص)
+        // ارتفاع القائمة محدد عشان عندنا 14 عنصر دلوقتي مش 2
         dropdownStyleData: DropdownStyleData(
+          maxHeight: 320,
           decoration: BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.circular(16),
@@ -130,7 +142,7 @@ class _DropDownLangState extends State<DropDownLang> {
 
         // padding كل عنصر جوه القائمة
         menuItemStyleData: const MenuItemStyleData(
-          padding: EdgeInsets.symmetric(horizontal: 8),
+          padding: EdgeInsets.symmetric(horizontal: 12),
         ),
       ),
     );

@@ -1,0 +1,14 @@
+{
+    "ViewAll": "Voir tout",
+    "WelcomeText": "Bonjour\nVoici quelques actualités pour vous",
+    "theme": "Thème",
+    "language": "Langue",
+    "goHome": "Retour à l'accueil",
+    "home": "Accueil",
+    "NoNewsFound": "Aucune actualité trouvée !",
+    "TryAgain": "Réessayer",
+    "noConnection": "Pas de connexion !",
+    "viewFullArticle": "Voir l'article complet",
+    "noResultsFound": "Aucun résultat trouvé !",
+    "search": "Rechercher"
+}

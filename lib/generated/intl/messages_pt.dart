@@ -1,5 +1,5 @@
 // DO NOT EDIT. This is code generated via package:intl/generate_localized.dart
-// This is a library that provides messages for a en locale. All the
+// This is a library that provides messages for a pt locale. All the
 // messages from the main program should be duplicated here with the same
 // function name.
 
@@ -18,25 +18,29 @@ final messages = new MessageLookup();
 typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 
 class MessageLookup extends MessageLookupByLibrary {
-  String get localeName => 'en';
+  String get localeName => 'pt';
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
-    "NoNewsFound": MessageLookupByLibrary.simpleMessage("No news found!"),
-    "TryAgain": MessageLookupByLibrary.simpleMessage("Try Again"),
-    "ViewAll": MessageLookupByLibrary.simpleMessage("View all"),
-    "WelcomeText": MessageLookupByLibrary.simpleMessage(
-      "Good Morning\nHere is Some News For You",
+    "NoNewsFound": MessageLookupByLibrary.simpleMessage(
+      "Nenhuma notícia encontrada!",
     ),
-    "goHome": MessageLookupByLibrary.simpleMessage("Go To Home"),
-    "home": MessageLookupByLibrary.simpleMessage("Home"),
-    "language": MessageLookupByLibrary.simpleMessage("Language"),
-    "noConnection": MessageLookupByLibrary.simpleMessage("No Connection!"),
-    "noResultsFound": MessageLookupByLibrary.simpleMessage("No Results Found!"),
-    "search": MessageLookupByLibrary.simpleMessage("Search"),
-    "theme": MessageLookupByLibrary.simpleMessage("Theme"),
+    "TryAgain": MessageLookupByLibrary.simpleMessage("Tentar novamente"),
+    "ViewAll": MessageLookupByLibrary.simpleMessage("Ver tudo"),
+    "WelcomeText": MessageLookupByLibrary.simpleMessage(
+      "Bom dia\nAqui estão algumas notícias para você",
+    ),
+    "goHome": MessageLookupByLibrary.simpleMessage("Ir para o início"),
+    "home": MessageLookupByLibrary.simpleMessage("Início"),
+    "language": MessageLookupByLibrary.simpleMessage("Idioma"),
+    "noConnection": MessageLookupByLibrary.simpleMessage("Sem conexão!"),
+    "noResultsFound": MessageLookupByLibrary.simpleMessage(
+      "Nenhum resultado encontrado!",
+    ),
+    "search": MessageLookupByLibrary.simpleMessage("Pesquisar"),
+    "theme": MessageLookupByLibrary.simpleMessage("Tema"),
     "viewFullArticle": MessageLookupByLibrary.simpleMessage(
-      "View Full Article",
+      "Ver artigo completo",
     ),
   };
 }

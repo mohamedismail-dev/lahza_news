@@ -1,5 +1,5 @@
 // DO NOT EDIT. This is code generated via package:intl/generate_localized.dart
-// This is a library that provides messages for a en locale. All the
+// This is a library that provides messages for a he locale. All the
 // messages from the main program should be duplicated here with the same
 // function name.
 
@@ -18,25 +18,23 @@ final messages = new MessageLookup();
 typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 
 class MessageLookup extends MessageLookupByLibrary {
-  String get localeName => 'en';
+  String get localeName => 'he';
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
-    "NoNewsFound": MessageLookupByLibrary.simpleMessage("No news found!"),
-    "TryAgain": MessageLookupByLibrary.simpleMessage("Try Again"),
-    "ViewAll": MessageLookupByLibrary.simpleMessage("View all"),
+    "NoNewsFound": MessageLookupByLibrary.simpleMessage("לא נמצאו חדשות!"),
+    "TryAgain": MessageLookupByLibrary.simpleMessage("נסה שוב"),
+    "ViewAll": MessageLookupByLibrary.simpleMessage("הצג הכל"),
     "WelcomeText": MessageLookupByLibrary.simpleMessage(
-      "Good Morning\nHere is Some News For You",
+      "בוקר טוב\nהנה כמה חדשות בשבילך",
     ),
-    "goHome": MessageLookupByLibrary.simpleMessage("Go To Home"),
-    "home": MessageLookupByLibrary.simpleMessage("Home"),
-    "language": MessageLookupByLibrary.simpleMessage("Language"),
-    "noConnection": MessageLookupByLibrary.simpleMessage("No Connection!"),
-    "noResultsFound": MessageLookupByLibrary.simpleMessage("No Results Found!"),
-    "search": MessageLookupByLibrary.simpleMessage("Search"),
-    "theme": MessageLookupByLibrary.simpleMessage("Theme"),
-    "viewFullArticle": MessageLookupByLibrary.simpleMessage(
-      "View Full Article",
-    ),
+    "goHome": MessageLookupByLibrary.simpleMessage("עבור לדף הבית"),
+    "home": MessageLookupByLibrary.simpleMessage("בית"),
+    "language": MessageLookupByLibrary.simpleMessage("שפה"),
+    "noConnection": MessageLookupByLibrary.simpleMessage("אין חיבור!"),
+    "noResultsFound": MessageLookupByLibrary.simpleMessage("לא נמצאו תוצאות!"),
+    "search": MessageLookupByLibrary.simpleMessage("חיפוש"),
+    "theme": MessageLookupByLibrary.simpleMessage("ערכת נושא"),
+    "viewFullArticle": MessageLookupByLibrary.simpleMessage("צפה במאמר המלא"),
   };
 }

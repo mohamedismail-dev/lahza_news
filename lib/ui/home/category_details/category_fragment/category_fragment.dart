@@ -22,10 +22,12 @@ class CategoryFragment extends StatelessWidget {
               SizedBox(height: 0.1),
               Row(
                 children: [
-                  Text(
-                    S.of(context).WelcomeText,
+                  Expanded(
+                    child: Text(
+                      S.of(context).WelcomeText,
 
-                    style: Theme.of(context).textTheme.titleLarge,
+                      style: Theme.of(context).textTheme.titleLarge,
+                    ),
                   ),
                 ],
               ),

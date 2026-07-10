@@ -20,6 +20,13 @@ class NewsBottomSheet extends StatelessWidget {
   Widget build(BuildContext context) {
     var width = MediaQuery.of(context).size.width;
     var height = MediaQuery.of(context).size.height;
+    String content = news.content!;
+
+    // النمط: [+ أي عدد من الأرقام ومسافات chars]
+    final regex = RegExp(r'\[\+\d+\s*chars\]');
+
+    // استبدل النمط بـ "\n$0" (سطر جديد + النص المطابق)
+    content = content.replaceFirst('…', '…\n');
 
     return Container(
       decoration: BoxDecoration(
@@ -46,9 +53,11 @@ class NewsBottomSheet extends StatelessWidget {
                 },
               ),
             ),
-            Text(
-              news.content ?? "",
 
+            Text(
+              content,
+              softWrap: true,
+              maxLines: 8,
               style: Theme.of(context).textTheme.titleSmall!.copyWith(
                 color: Theme.of(context).colorScheme.primary,
               ),

@@ -25,6 +25,7 @@ class _SourcesWidgetState extends State<SourcesWidget> {
               setState(() {});
             },
             isScrollable: true,
+            labelPadding: const EdgeInsets.symmetric(horizontal: 10),
             labelColor: Theme.of(context).colorScheme.onPrimary,
             tabAlignment: .start,
             labelStyle: Theme.of(context).textTheme.titleMedium,
@@ -33,7 +34,15 @@ class _SourcesWidgetState extends State<SourcesWidget> {
             indicatorColor: Theme.of(context).colorScheme.onPrimary,
             tabs: [for (var source in widget.sources) Tab(text: source.name)],
           ),
-          Expanded(child: NewsWidget(source: widget.sources[selectedIndex])),
+          // Expanded(child: NewsWidget(source: widget.sources[selectedIndex])),
+          Expanded(
+            child: TabBarView(
+              physics: const BouncingScrollPhysics(), // لإضافة مرونة عند السحب
+              children: widget.sources
+                  .map((source) => NewsWidget(source: source))
+                  .toList(),
+            ),
+          ),
         ],
       ),
     );

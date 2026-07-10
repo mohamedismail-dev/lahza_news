@@ -1,0 +1,14 @@
+{
+    "ViewAll": "Alle anzeigen",
+    "WelcomeText": "Guten Morgen\nHier sind einige Nachrichten für dich",
+    "theme": "Design",
+    "language": "Sprache",
+    "goHome": "Zur Startseite",
+    "home": "Startseite",
+    "NoNewsFound": "Keine Nachrichten gefunden!",
+    "TryAgain": "Erneut versuchen",
+    "noConnection": "Keine Verbindung!",
+    "viewFullArticle": "Vollständigen Artikel ansehen",
+    "noResultsFound": "Keine Ergebnisse gefunden!",
+    "search": "Suche"
+}

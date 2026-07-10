@@ -19,13 +19,13 @@ class MainErrorWidget extends StatelessWidget {
     var hight = MediaQuery.of(context).size.height;
     return Center(
       child: Column(
-        spacing: hight * 0.01,
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           SvgPicture.asset(
             "assets/images/no_connection.svg",
             width: width * 0.5,
+            height: hight * 0.20,
           ),
           errorMessage.isEmpty
               ? Text(
@@ -33,11 +33,15 @@ class MainErrorWidget extends StatelessWidget {
                   style: Theme.of(context).textTheme.titleMedium,
                 )
               : Padding(
-                  padding: const EdgeInsets.all(25.0),
+                  padding: const EdgeInsets.only(
+                    left: 16,
+                    right: 16,
+                    bottom: 16,
+                  ),
                   child: SizedBox(
                     child: Text(
                       errorMessage,
-                      style: Theme.of(context).textTheme.titleMedium,
+                      style: Theme.of(context).textTheme.titleSmall,
                       textAlign: TextAlign.center,
                     ),
                   ),

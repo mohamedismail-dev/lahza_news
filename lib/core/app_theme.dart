@@ -119,6 +119,11 @@ class AppTheme {
           vertical: 16,
         ),
       ),
+      textSelectionTheme: TextSelectionThemeData(
+        selectionHandleColor:
+            AppColors.onPrimaryColorLight, // غيّر إلى اللون المناسب لك
+        cursorColor: AppColors.onPrimaryColorLight,
+      ),
     );
   }
 
@@ -219,6 +224,11 @@ class AppTheme {
           horizontal: 16,
           vertical: 16,
         ),
+      ),
+      textSelectionTheme: TextSelectionThemeData(
+        selectionHandleColor:
+            AppColors.onPrimaryColorDark, // غيّر إلى اللون المناسب لك
+        cursorColor: AppColors.onPrimaryColorDark,
       ),
     );
   }
