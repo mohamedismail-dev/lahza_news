@@ -28,6 +28,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "WelcomeText": MessageLookupByLibrary.simpleMessage(
       "صبح بخیر\nآپ کے لیے کچھ خبریں یہ ہیں",
     ),
+    "by": MessageLookupByLibrary.simpleMessage("کے ساتھ:"),
     "goHome": MessageLookupByLibrary.simpleMessage("ہوم پر جائیں"),
     "home": MessageLookupByLibrary.simpleMessage("ہوم"),
     "language": MessageLookupByLibrary.simpleMessage("زبان"),

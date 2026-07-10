@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:lahza_news/core/app_colors.dart';
+import 'package:lahza_news/core/theme/app_colors.dart';
 
 class DrawerConfig extends StatelessWidget {
   String name;

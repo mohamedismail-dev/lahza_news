@@ -1,6 +1,6 @@
 import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:flutter/material.dart';
-import 'package:lahza_news/core/app_colors.dart';
+import 'package:lahza_news/core/theme/app_colors.dart';
 import 'package:lahza_news/core/providers/language_provider.dart';
 import 'package:provider/provider.dart';
 
@@ -53,9 +53,7 @@ class _DropDownLangState extends State<DropDownLang> {
                     Expanded(
                       child: Text(
                         lang.nativeName,
-                        textDirection: lang.isRtl
-                            ? TextDirection.rtl
-                            : TextDirection.ltr,
+
                         style: const TextStyle(
                           color: Colors.black,
                           fontSize: 16,
@@ -63,6 +61,7 @@ class _DropDownLangState extends State<DropDownLang> {
                         ),
                       ),
                     ),
+
                     if (lang.code == languageProvider.language)
                       const Icon(
                         Icons.check_rounded,
@@ -80,7 +79,9 @@ class _DropDownLangState extends State<DropDownLang> {
           return languages
               .map(
                 (lang) => Align(
-                  alignment: Alignment.centerLeft,
+                  alignment: lang.isRtl
+                      ? Alignment.centerRight
+                      : Alignment.centerLeft,
                   child: Text(
                     lang.nativeName,
                     textDirection: lang.isRtl

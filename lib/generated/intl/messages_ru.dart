@@ -28,6 +28,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "WelcomeText": MessageLookupByLibrary.simpleMessage(
       "Доброе утро\nВот немного новостей для вас",
     ),
+    "by": MessageLookupByLibrary.simpleMessage("По:"),
     "goHome": MessageLookupByLibrary.simpleMessage("На главную"),
     "home": MessageLookupByLibrary.simpleMessage("Главная"),
     "language": MessageLookupByLibrary.simpleMessage("Язык"),

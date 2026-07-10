@@ -26,7 +26,9 @@ class _CategoryDetailsState extends State<CategoryDetails> {
       body: FutureBuilder<SourceResponse>(
         future: ApiManager.getSources(
           widget.category.id,
-          languageProvider.currentLanguage.toString(),
+          languageProvider.currentLanguage.code == "ur"
+              ? "ud"
+              : languageProvider.currentLanguage.code,
         ),
         builder: (context, snapshot) {
           //todo: Loading
@@ -39,7 +41,9 @@ class _CategoryDetailsState extends State<CategoryDetails> {
               onPressed: () {
                 ApiManager.getSources(
                   widget.category.id,
-                  languageProvider.currentLanguage.toString(),
+                  languageProvider.currentLanguage.code == "ur"
+                      ? "ud"
+                      : languageProvider.currentLanguage.code,
                 );
                 setState(() {});
               },
@@ -54,7 +58,9 @@ class _CategoryDetailsState extends State<CategoryDetails> {
               onPressed: () {
                 ApiManager.getSources(
                   widget.category.id,
-                  languageProvider.currentLanguage.toString(),
+                  languageProvider.currentLanguage.code == "ur"
+                      ? "ud"
+                      : languageProvider.currentLanguage.code,
                 );
                 setState(() {});
               },

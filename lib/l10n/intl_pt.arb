@@ -10,5 +10,6 @@
     "noConnection": "Sem conexão!",
     "viewFullArticle": "Ver artigo completo",
     "noResultsFound": "Nenhum resultado encontrado!",
-    "search": "Pesquisar"
+    "search": "Pesquisar",
+    "by": "Por:"
 }

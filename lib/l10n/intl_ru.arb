@@ -10,5 +10,6 @@
     "noConnection": "Нет подключения!",
     "viewFullArticle": "Просмотреть полную статью",
     "noResultsFound": "Результаты не найдены!",
-    "search": "Поиск"
+    "search": "Поиск",
+    "by": "По:"
 }

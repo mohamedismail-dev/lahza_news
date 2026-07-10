@@ -28,6 +28,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "WelcomeText": MessageLookupByLibrary.simpleMessage(
       "בוקר טוב\nהנה כמה חדשות בשבילך",
     ),
+    "by": MessageLookupByLibrary.simpleMessage("על ידי:"),
     "goHome": MessageLookupByLibrary.simpleMessage("עבור לדף הבית"),
     "home": MessageLookupByLibrary.simpleMessage("בית"),
     "language": MessageLookupByLibrary.simpleMessage("שפה"),

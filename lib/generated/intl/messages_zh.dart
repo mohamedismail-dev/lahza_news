@@ -26,6 +26,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "TryAgain": MessageLookupByLibrary.simpleMessage("重试"),
     "ViewAll": MessageLookupByLibrary.simpleMessage("查看全部"),
     "WelcomeText": MessageLookupByLibrary.simpleMessage("早上好\n这里是为您准备的新闻"),
+    "by": MessageLookupByLibrary.simpleMessage("作者:"),
     "goHome": MessageLookupByLibrary.simpleMessage("返回主页"),
     "home": MessageLookupByLibrary.simpleMessage("主页"),
     "language": MessageLookupByLibrary.simpleMessage("语言"),

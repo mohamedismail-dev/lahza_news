@@ -19,7 +19,13 @@ class _SearchScreenState extends State<SearchScreen> {
   List<News> articles = [];
   String error = "";
   bool isLoading = false;
-  TextEditingController searchController = TextEditingController();
+  final searchController = TextEditingController();
+  @override
+  void dispose() {
+    super.dispose();
+    searchController.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     var width = MediaQuery.of(context).size.width;
@@ -111,7 +117,7 @@ class _SearchScreenState extends State<SearchScreen> {
                             ),
                             Text(
                               S.of(context).noResultsFound,
-                              style: Theme.of(context).textTheme.titleMedium,
+                              style: Theme.of(context).textTheme.titleSmall,
                             ),
                           ],
                         ),
@@ -125,7 +131,7 @@ class _SearchScreenState extends State<SearchScreen> {
             SliverList.builder(
               itemCount: articles.length,
               itemBuilder: (context, index) {
-                return NewsItems(news: articles[index]);
+                return NewsItems(news: articles[index], index: index);
               },
             ),
         ],

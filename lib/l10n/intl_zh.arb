@@ -10,5 +10,6 @@
     "noConnection": "无网络连接！",
     "viewFullArticle": "查看完整文章",
     "noResultsFound": "未找到结果！",
-    "search": "搜索"
+    "search": "搜索",
+    "by": "作者:"
 }

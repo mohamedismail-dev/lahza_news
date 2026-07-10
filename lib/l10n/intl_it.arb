@@ -10,5 +10,6 @@
     "noConnection": "Nessuna connessione!",
     "viewFullArticle": "Visualizza l'articolo completo",
     "noResultsFound": "Nessun risultato trovato!",
-    "search": "Cerca"
+    "search": "Cerca",
+    "by": "Da:"
 }

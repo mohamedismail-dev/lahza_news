@@ -1,7 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:lahza_news/core/app_colors.dart';
+import 'package:lahza_news/core/theme/app_colors.dart';
 import 'package:lahza_news/generated/l10n.dart';
 import 'package:lahza_news/model/news_response.dart';
 import 'package:lahza_news/widgets/main_error_widget.dart';
@@ -21,11 +21,7 @@ class NewsBottomSheet extends StatelessWidget {
     var width = MediaQuery.of(context).size.width;
     var height = MediaQuery.of(context).size.height;
     String content = news.content!;
-
-    // النمط: [+ أي عدد من الأرقام ومسافات chars]
     final regex = RegExp(r'\[\+\d+\s*chars\]');
-
-    // استبدل النمط بـ "\n$0" (سطر جديد + النص المطابق)
     content = content.replaceFirst('…', '…\n');
 
     return Container(

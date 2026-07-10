@@ -19,7 +19,7 @@ class ApiManager {
     try {
       Uri url = Uri.https(ApiConstans.baseUrl, EndPoints.sourceApi, {
         'apiKey': ApiConstans.apiKey,
-        'language': 'lang',
+        'language': lang,
         'category': categoryId,
       });
       var response = await http.get(url);
@@ -35,12 +35,12 @@ class ApiManager {
 // API News
 // https://newsapi.org/v2/everything?q=bitcoin&apiKey=ce35e3faa1c841748522eb6298140293
 
-Future<NewsResponse> getNewsBySourceId(String sourceId, String lang) async {
+Future<NewsResponse> getNewsBySourceId(String sourceId) async {
   // TODO: implement getNews
   try {
     Uri url = Uri.https(ApiConstans.baseUrl, EndPoints.newsApi, {
       "apiKey": ApiConstans.apiKey,
-      "language": lang,
+      // "language": lang,
       "sources": sourceId,
     });
     var response = await http.get(url);

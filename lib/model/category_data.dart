@@ -38,7 +38,7 @@ List<CategoryData> categories = [
     image: 'assets/images/category2.png',
     titles: {
       'en': 'Business',
-      'ar': 'تجــارة',
+      'ar': 'ادارة أعمال',
       'de': 'Wirtschaft',
       'es': 'Negocios',
       'fr': 'Affaires',

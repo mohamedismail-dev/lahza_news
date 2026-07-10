@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:lahza_news/core/app_colors.dart';
+import 'package:lahza_news/core/theme/app_colors.dart';
 import 'package:svg_flutter/svg.dart';
 
 class DrawerItem extends StatelessWidget {

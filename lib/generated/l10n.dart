@@ -138,6 +138,11 @@ class S {
   String get search {
     return Intl.message('Search', name: 'search', desc: '', args: []);
   }
+
+  /// `By:`
+  String get by {
+    return Intl.message('By:', name: 'by', desc: '', args: []);
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class LanguageProvider extends ChangeNotifier {
   // الكود الافتراضي عند أول تشغيل للتطبيق
@@ -39,10 +40,18 @@ class LanguageProvider extends ChangeNotifier {
     orElse: () => supportedLanguages.first,
   );
 
-  void setLanguage(String code) {
+  Future<void> loadLanguage() async {
+    final prefs = await SharedPreferences.getInstance();
+    language = prefs.getString('language') ?? 'en';
+    notifyListeners();
+  }
+
+  void setLanguage(String code) async {
     final isSupported = supportedLanguages.any((lang) => lang.code == code);
     if (!isSupported || code == language) return;
     language = code;
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setString('language', code);
     notifyListeners();
   }
 }

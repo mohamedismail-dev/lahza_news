@@ -10,5 +10,6 @@
     "noConnection": "Ingen anslutning!",
     "viewFullArticle": "Visa hela artikeln",
     "noResultsFound": "Inga resultat hittades!",
-    "search": "Sök"
+    "search": "Sök",
+    "by": "Av:"
 }

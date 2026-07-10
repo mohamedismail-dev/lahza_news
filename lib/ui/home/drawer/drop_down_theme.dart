@@ -1,6 +1,6 @@
 import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:flutter/material.dart';
-import 'package:lahza_news/core/app_colors.dart';
+import 'package:lahza_news/core/theme/app_colors.dart';
 import 'package:lahza_news/core/providers/language_provider.dart';
 import 'package:lahza_news/core/providers/theme_provider.dart';
 import 'package:provider/provider.dart';
@@ -106,7 +106,6 @@ class _DropDownThemeState extends State<DropDownTheme> {
           }
         },
 
-        // ستايل الزرار المقفول (الصندوق نفسه، مش النص)
         buttonStyleData: ButtonStyleData(
           height: 56,
           padding: EdgeInsets.symmetric(horizontal: 8),
@@ -131,7 +130,6 @@ class _DropDownThemeState extends State<DropDownTheme> {
           ),
         ),
 
-        // ستايل القائمة المفتوحة (الصندوق نفسه، مش النص)
         dropdownStyleData: DropdownStyleData(
           decoration: BoxDecoration(
             color: Colors.white,

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:lahza_news/core/app_colors.dart';
+import 'package:lahza_news/core/theme/app_colors.dart';
 import 'package:lahza_news/core/providers/language_provider.dart';
 import 'package:lahza_news/generated/l10n.dart';
 import 'package:lahza_news/ui/home/drawer/drawer_config.dart';

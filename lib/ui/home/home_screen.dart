@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:lahza_news/core/app_colors.dart';
+import 'package:lahza_news/core/theme/app_colors.dart';
 import 'package:lahza_news/core/providers/language_provider.dart';
 import 'package:lahza_news/generated/l10n.dart';
 import 'package:lahza_news/model/category_data.dart';
@@ -50,9 +50,10 @@ class _HomeScreenState extends State<HomeScreen> {
           backgroundColor: AppColors.primaryColorDark,
           child: SingleChildScrollView(
             child: Column(
+              mainAxisSize: MainAxisSize.max,
               children: [
                 Container(
-                  // padding: EdgeInsets.only(top: hight * 0.025),
+                  padding: const EdgeInsets.all(16),
                   width: double.infinity,
                   height: hight * 0.30,
                   decoration: BoxDecoration(
@@ -63,14 +64,20 @@ class _HomeScreenState extends State<HomeScreen> {
                     color: AppColors.onPrimaryColorDark,
                   ),
                   child: Row(
+                    mainAxisSize: .max,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Image.asset(
-                        "assets/images/logo_splash_light.png",
+                      Expanded(
+                        child: Image.asset(
+                          "assets/images/logo_drawer.png",
 
-                        alignment: Alignment.center,
-                        // height: hight * 0.8,
-                        fit: BoxFit.fitWidth,
+                          alignment: Alignment.center,
+
+                          width: width * 0.50,
+                          fit: BoxFit.contain,
+
+                          // fit: BoxFit.scaleDown,
+                        ),
                       ),
                     ],
                   ),

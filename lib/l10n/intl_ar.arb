@@ -10,7 +10,8 @@
     "noConnection": "لا يوجد اتصال!",
     "viewFullArticle": "عرض المقالة كاملة",
     "noResultsFound": "لا يوجد نتائج!",
-    "search": "بحث"
+    "search": "بحث",
+    "by": "بواسطة:"
     
     
 }

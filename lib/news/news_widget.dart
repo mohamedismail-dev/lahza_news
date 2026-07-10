@@ -25,10 +25,7 @@ class _NewsWidgetState extends State<NewsWidget> {
     var width = MediaQuery.of(context).size.width;
     var height = MediaQuery.of(context).size.height;
     return FutureBuilder(
-      future: getNewsBySourceId(
-        widget.source.id ?? "",
-        languageProvider.currentLanguage.toString(),
-      ),
+      future: getNewsBySourceId(widget.source.id ?? ""),
       builder: (context, snapshot) {
         //todo: Loading
         if (snapshot.connectionState == ConnectionState.waiting) {
@@ -38,10 +35,7 @@ class _NewsWidgetState extends State<NewsWidget> {
           return MainErrorWidget(
             errorMessage: snapshot.data?.message ?? "",
             onPressed: () {
-              getNewsBySourceId(
-                widget.source.id ?? "",
-                languageProvider.currentLanguage.toString(),
-              );
+              getNewsBySourceId(widget.source.id ?? "");
               setState(() {});
             },
           );
@@ -68,7 +62,7 @@ class _NewsWidgetState extends State<NewsWidget> {
                   physics: ScrollPhysics(parent: BouncingScrollPhysics()),
                   itemCount: newsList.length,
                   itemBuilder: (context, index) {
-                    return NewsItems(news: newsList[index]);
+                    return NewsItems(news: newsList[index], index: index);
                   },
                 );
         }

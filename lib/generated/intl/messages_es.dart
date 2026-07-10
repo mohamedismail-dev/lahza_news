@@ -30,6 +30,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "WelcomeText": MessageLookupByLibrary.simpleMessage(
       "Buenos días\nAquí tienes algunas noticias para ti",
     ),
+    "by": MessageLookupByLibrary.simpleMessage("Por:"),
     "goHome": MessageLookupByLibrary.simpleMessage("Ir al inicio"),
     "home": MessageLookupByLibrary.simpleMessage("Inicio"),
     "language": MessageLookupByLibrary.simpleMessage("Idioma"),

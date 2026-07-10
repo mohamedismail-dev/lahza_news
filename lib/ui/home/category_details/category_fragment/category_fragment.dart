@@ -1,4 +1,6 @@
+import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:lahza_news/generated/l10n.dart';
 import 'package:lahza_news/model/category_data.dart';
 import 'package:lahza_news/ui/home/category_details/category_fragment/category_items.dart';
@@ -23,10 +25,27 @@ class CategoryFragment extends StatelessWidget {
               Row(
                 children: [
                   Expanded(
-                    child: Text(
-                      S.of(context).WelcomeText,
+                    child: AnimatedSize(
+                      key: ValueKey(
+                        '${S.of(context).WelcomeText}_${Theme.of(context).textTheme.titleMedium}',
+                      ),
+                      duration: const Duration(milliseconds: 1200),
+                      curve: Curves.fastLinearToSlowEaseIn,
+                      alignment: Alignment.topCenter,
+                      child: AnimatedTextKit(
+                        animatedTexts: [
+                          TypewriterAnimatedText(
+                            S.of(context).WelcomeText,
+                            textStyle: Theme.of(context).textTheme.titleMedium,
+                            speed: const Duration(milliseconds: 100),
+                            textAlign: TextAlign.start,
 
-                      style: Theme.of(context).textTheme.titleLarge,
+                            cursor: '|',
+                          ),
+                        ],
+                        totalRepeatCount: 1,
+                        isRepeatingAnimation: false,
+                      ),
                     ),
                   ),
                 ],
