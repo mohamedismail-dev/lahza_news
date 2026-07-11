@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:lahza_news/core/theme/app_colors.dart';
 import 'package:lahza_news/generated/l10n.dart';
-import 'package:lahza_news/model/news_response.dart';
-import 'package:lahza_news/widgets/main_error_widget.dart';
-import 'package:lahza_news/widgets/main_loading.dart';
+import 'package:lahza_news/data/models/news_response.dart';
+import 'package:lahza_news/presentation/widgets/main_error_widget.dart';
+import 'package:lahza_news/presentation/widgets/main_loading.dart';
 
 class NewsBottomSheet extends StatelessWidget {
   VoidCallback viewFullArticle;

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:lahza_news/widgets/main_loading.dart';
+import 'package:lahza_news/presentation/widgets/main_loading.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 class ViewFullNews extends StatefulWidget {

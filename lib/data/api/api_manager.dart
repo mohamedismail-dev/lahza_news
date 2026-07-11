@@ -1,10 +1,10 @@
 import 'dart:convert';
 
 import 'package:http/http.dart' as http;
-import 'package:lahza_news/api/api_constans.dart';
-import 'package:lahza_news/api/end_points.dart';
-import 'package:lahza_news/model/news_response.dart';
-import 'package:lahza_news/model/source_response.dart';
+import 'package:lahza_news/data/api/api_constants.dart';
+import 'package:lahza_news/data/api/end_points.dart';
+import 'package:lahza_news/data/models/news_response.dart';
+import 'package:lahza_news/data/models/source_response.dart';
 
 class ApiManager {
   // API Sources
@@ -17,8 +17,8 @@ class ApiManager {
     // TODO: implement getSources
 
     try {
-      Uri url = Uri.https(ApiConstans.baseUrl, EndPoints.sourceApi, {
-        'apiKey': ApiConstans.apiKey,
+      Uri url = Uri.https(ApiConstants.baseUrl, EndPoints.sourceApi, {
+        'apiKey': ApiConstants.apiKey,
         'language': lang,
         'category': categoryId,
       });

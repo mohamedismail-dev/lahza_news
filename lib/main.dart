@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:lahza_news/core/theme/app_theme.dart';
-import 'package:lahza_news/core/providers/language_provider.dart';
-import 'package:lahza_news/core/providers/theme_provider.dart';
+import 'package:lahza_news/presentation/providers/language_provider.dart';
+import 'package:lahza_news/presentation/providers/theme_provider.dart';
 import 'package:lahza_news/generated/l10n.dart';
-import 'package:lahza_news/ui/home/home_screen.dart';
+import 'package:lahza_news/presentation/home/home_screen.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 

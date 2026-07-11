@@ -1,7 +1,7 @@
 import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:flutter/material.dart';
 import 'package:lahza_news/core/theme/app_colors.dart';
-import 'package:lahza_news/core/providers/language_provider.dart';
+import 'package:lahza_news/presentation/providers/language_provider.dart';
 import 'package:provider/provider.dart';
 
 class DropDownLang extends StatefulWidget {

@@ -2,8 +2,8 @@ import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:lahza_news/generated/l10n.dart';
-import 'package:lahza_news/model/category_data.dart';
-import 'package:lahza_news/ui/home/category_details/category_fragment/category_items.dart';
+import 'package:lahza_news/data/models/category_data.dart';
+import 'package:lahza_news/presentation/home/category_details/category_fragment/category_items.dart';
 
 typedef onCategoryClick = void Function(CategoryData);
 

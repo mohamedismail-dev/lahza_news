@@ -2,11 +2,11 @@ import 'dart:ffi';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:lahza_news/core/providers/language_provider.dart';
+import 'package:lahza_news/presentation/providers/language_provider.dart';
 import 'package:lahza_news/gen/assets.gen.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:lahza_news/generated/l10n.dart';
-import 'package:lahza_news/model/category_data.dart';
+import 'package:lahza_news/data/models/category_data.dart';
 import 'package:provider/provider.dart';
 
 class CategoryItems extends StatelessWidget {

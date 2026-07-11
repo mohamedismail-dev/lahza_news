@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:lahza_news/model/source_response.dart';
-import 'package:lahza_news/news/news_widget.dart';
+import 'package:lahza_news/data/models/source_response.dart';
+import 'package:lahza_news/presentation/news/news_widget.dart';
 
 class SourcesWidget extends StatefulWidget {
   final List<Source> sources;

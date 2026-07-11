@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:lahza_news/api/api_manager.dart';
-import 'package:lahza_news/core/providers/language_provider.dart';
+import 'package:lahza_news/data/api/api_manager.dart';
+import 'package:lahza_news/presentation/providers/language_provider.dart';
 import 'package:lahza_news/gen/assets.gen.dart';
-import 'package:lahza_news/model/category_data.dart';
-import 'package:lahza_news/model/source_response.dart';
-import 'package:lahza_news/widgets/main_error_widget.dart';
-import 'package:lahza_news/widgets/main_loading.dart';
+import 'package:lahza_news/data/models/category_data.dart';
+import 'package:lahza_news/data/models/source_response.dart';
+import 'package:lahza_news/presentation/widgets/main_error_widget.dart';
+import 'package:lahza_news/presentation/widgets/main_loading.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:lahza_news/widgets/sources_widget.dart';
+import 'package:lahza_news/presentation/widgets/sources_widget.dart';
 import 'package:provider/provider.dart';
 
 class CategoryDetails extends StatefulWidget {

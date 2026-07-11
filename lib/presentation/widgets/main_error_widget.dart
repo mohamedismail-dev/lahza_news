@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:lahza_news/api/api_manager.dart';
+import 'package:lahza_news/data/api/api_manager.dart';
 import 'package:lahza_news/generated/l10n.dart';
 import 'package:svg_flutter/svg.dart';
 

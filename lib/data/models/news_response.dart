@@ -1,4 +1,4 @@
-import 'package:lahza_news/model/source_response.dart';
+import 'package:lahza_news/data/models/source_response.dart';
 
 class NewsResponse {
   String? status;
