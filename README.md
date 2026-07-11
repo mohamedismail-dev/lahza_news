@@ -153,14 +153,21 @@ The project follows a clean and scalable structure to make development and maint
 
 ```text
 lib
-│
+├── api                 # API services and endpoints
 ├── core
-├── data
-├── presentation
-├── models
-├── services
-├── localization
-└── main.dart
+│   ├── providers       # State management
+│   └── theme           # App themes, colors and typography
+├── extensions          # Dart extensions
+├── gen                 # Generated assets and fonts
+├── generated           # Generated localization files
+├── l10n                # Localization (.arb) files
+├── models              # Data models
+├── news                # News widgets and article details
+├── ui
+│   ├── home            # Home screen, categories and drawer
+│   └── search          # Search functionality
+├── widgets             # Shared reusable widgets
+└── main.dart           # Application entry point
 ```
 
 ---
