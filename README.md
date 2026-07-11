@@ -152,22 +152,30 @@ Whether you're interested in sports, business, entertainment, science, health, o
 The project follows a clean and scalable structure to make development and maintenance easier.
 
 ```text
-lib
-├── api                 # API services and endpoints
-├── core
-│   ├── providers       # State management
-│   └── theme           # App themes, colors and typography
-├── extensions          # Dart extensions
-├── gen                 # Generated assets and fonts
-├── generated           # Generated localization files
-├── l10n                # Localization (.arb) files
-├── models              # Data models
-├── news                # News widgets and article details
-├── ui
-│   ├── home            # Home screen, categories and drawer
-│   └── search          # Search functionality
-├── widgets             # Shared reusable widgets
-└── main.dart           # Application entry point
+Presentation
+│
+├── Home
+├── News
+├── Search
+├── Providers
+└── Shared Widgets
+        │
+        ▼
+Data
+│
+├── API Layer
+└── Models
+        │
+        ▼
+Core
+│
+├── Theme
+└── Extensions
+        │
+        ▼
+Localization
+├── ARB Files
+└── Generated Files
 ```
 
 ---
@@ -217,17 +225,23 @@ flutter run
 # 📂 Project Structure
 
 ```text
-lib/
-│
-├── core/
-├── data/
-├── models/
-├── presentation/
-│   ├── screens/
-│   ├── widgets/
-│   └── bloc/
-├── localization/
-└── main.dart
+lib
+├── core
+│   └── theme                # App themes, colors and typography
+├── data
+│   ├── api                  # API configuration and network layer
+│   └── models               # Data models
+├── extensions               # Dart extensions
+├── gen                      # Generated assets and fonts
+├── generated                # Generated localization files
+├── l10n                     # Localization resources (.arb)
+├── presentation
+│   ├── home                 # Home screen and categories
+│   ├── news                 # News components and article details
+│   ├── providers            # Theme & language state management
+│   ├── search               # Search feature
+│   └── widgets              # Shared reusable widgets
+└── main.dart                # Application entry point
 ```
 
 ---
